@@ -11,14 +11,14 @@ import { ConfigModule } from './config/config.module';
 
 @Module({
     imports: [
+        ConfigModule,
+        LoggerModule,
+        ExceptionModule,
+        AdaptersModule,
         AuthModule,
         UserModule,
         AnimalModule,
         BookingModule,
-        LoggerModule,
-        ExceptionModule,
-        AdaptersModule,
-        ConfigModule,
     ],
     providers: [AppService],
 })
