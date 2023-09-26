@@ -8,6 +8,7 @@ import { LoggerModule } from './logger/logger.module';
 import { ExceptionModule } from './exception/exception.module';
 import { AdaptersModule } from './adapters/adapters.module';
 import { ConfigModule } from './config/config.module';
+import { MongooseModule } from '@nestjs/mongoose';
 
 @Module({
     imports: [
@@ -19,6 +20,7 @@ import { ConfigModule } from './config/config.module';
         UserModule,
         AnimalModule,
         BookingModule,
+        MongooseModule.forRoot('mongodb://localhost/nest'),
     ],
     providers: [AppService],
 })
