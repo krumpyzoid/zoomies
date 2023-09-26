@@ -10,6 +10,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 @Module({
     imports: [MongooseModule.forFeature([{ name: Animal.name, schema: AnimalSchema }])],
     providers: [AddAnimalService, GetAnimalService, UpdateAnimalService, RemoveAnimalService],
+    exports: [AddAnimalService, GetAnimalService, UpdateAnimalService, RemoveAnimalService],
     controllers: [AnimalController],
 })
 export class AnimalModule {}
